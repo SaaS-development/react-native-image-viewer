@@ -145,7 +145,8 @@ var ImageViewer = /** @class */ (function (_super) {
             _this.standardPositionX = _this.positionXNumber;
             react_native_1.Animated.timing(_this.positionX, {
                 toValue: _this.positionXNumber,
-                duration: _this.props.pageAnimateTime
+                duration: _this.props.pageAnimateTime,
+                useNativeDriver: false
             }).start();
             var nextIndex = (_this.state.currentShowIndex || 0) - 1;
             _this.setState({
@@ -171,7 +172,8 @@ var ImageViewer = /** @class */ (function (_super) {
             _this.standardPositionX = _this.positionXNumber;
             react_native_1.Animated.timing(_this.positionX, {
                 toValue: _this.positionXNumber,
-                duration: _this.props.pageAnimateTime
+                duration: _this.props.pageAnimateTime,
+                useNativeDriver: false
             }).start();
             var nextIndex = (_this.state.currentShowIndex || 0) + 1;
             _this.setState({
@@ -274,7 +276,8 @@ var ImageViewer = /** @class */ (function (_super) {
             // 显示动画
             react_native_1.Animated.timing(this.fadeAnim, {
                 toValue: 1,
-                duration: 200
+                duration: 200,
+                useNativeDriver: false
             }).start();
         }
     };
@@ -308,7 +311,8 @@ var ImageViewer = /** @class */ (function (_super) {
             // 显示动画
             react_native_1.Animated.timing(_this.fadeAnim, {
                 toValue: 1,
-                duration: 200
+                duration: 200,
+                useNativeDriver: false
             }).start();
         });
     };
@@ -401,7 +405,8 @@ var ImageViewer = /** @class */ (function (_super) {
         this.positionXNumber = this.standardPositionX;
         react_native_1.Animated.timing(this.positionX, {
             toValue: this.standardPositionX,
-            duration: 150
+            duration: 150,
+            useNativeDriver: false
         }).start();
     };
     /**
